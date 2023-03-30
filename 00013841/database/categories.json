@@ -1,0 +1,16 @@
+[
+    {
+        "categoryId": 1,
+        "title": "Database Management System"
+    },
+
+    {
+        "categoryId": 2,
+        "title": "Fundamentals of Programming"
+    },
+
+    {
+        "categoryId": 3,
+        "title": "Software Design Principles"
+    }
+]

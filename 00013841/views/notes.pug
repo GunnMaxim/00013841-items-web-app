@@ -1,0 +1,11 @@
+extends layout.pug 
+
+block content 
+    div.container 
+        h1 Catalogue
+
+        each item in items 
+            div.item-wrapper
+                a.item(href=`/notes/${item.id}`) #{item.title}
+                a.delete(href=`/${item.id}/delete`) Delete 
+                a.update(href=`/${item.id}/update`) Update 

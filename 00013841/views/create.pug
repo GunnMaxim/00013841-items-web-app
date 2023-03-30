@@ -1,0 +1,37 @@
+extends layout.pug 
+
+block content
+    div.container
+        h1 Create Item 
+        if error
+         p.error Some Error occured! Try again!
+        if success
+         p.success Item is created!
+
+
+        if item
+            form.form#update-form(data-id = item.id)
+                label Title 
+                input.input(type="text", name="title" value = item.title)
+                label Price
+                input.input(type="number", name="price" value = item.price)
+                label Description 
+                textarea.input(type="text", name="description" value = item.description) 
+                button.btn#update-record Update 
+
+
+
+
+
+
+        else 
+            form.form(action="/create" method='POST')
+                    label Title 
+                     input.input(type="text", name='title')
+                    label Price
+                     input.input(type="number", name="price")
+                    label Description 
+                     textarea.input(type="text", name="description") 
+                    label Photo
+                     input.input(type="file",name = "photo", accept="image/jpeg, image/png,image/jpg")
+                    button.input Submit
